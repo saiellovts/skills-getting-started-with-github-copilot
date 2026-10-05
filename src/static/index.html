@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mergington High School Activities</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .activity-participants {
+        margin-top: 1rem;
+        padding: 0.85rem 1rem;
+        border-radius: 0.75rem;
+        background: #f3f6fb;
+      }
+
+      .activity-participants h4 {
+        margin: 0 0 0.5rem;
+        color: #243b53;
+        font-size: 0.95rem;
+      }
+
+      .activity-participants ul {
+        margin: 0;
+        padding-left: 1.25rem;
+        color: #486581;
+      }
+
+      .activity-participants li + li {
+        margin-top: 0.25rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -19,6 +43,12 @@
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
+        <template id="activity-participants-template">
+          <section class="activity-participants" aria-label="Activity participants">
+            <h4>Participants</h4>
+            <ul></ul>
+          </section>
+        </template>
       </section>
 
       <section id="signup-container">
